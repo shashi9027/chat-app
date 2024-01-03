@@ -1,3 +1,4 @@
+import { lightBlue } from '@mui/material/colors'
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -15,8 +16,11 @@ const config: Config = {
       },
       colors:{
         lightBlue: "#F0F4FA",
+        lightBlue100 : "#F8FAFF",
         blue: "#AFBBF7",
-        horizontal: "#B4B4B4"
+        horizontal: "#B4B4B4",
+        textColor: "#7C7C7D",
+        btnColor: "#5B96F7"
       }
     },
   },

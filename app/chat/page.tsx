@@ -1,6 +1,12 @@
+import Profile from "@/components/profile";
+
 export default function Chat(){
     return (
-        <div>hi</div>
+        <div>
+            <div>
+                <Profile/>
+            </div>
+        </div>
     )
 }
 

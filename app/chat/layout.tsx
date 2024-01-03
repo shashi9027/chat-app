@@ -1,6 +1,7 @@
 import User from '@/components/avatar';
 import Image from 'next/image';
 import React, { ReactNode } from 'react';
+import { TextField } from '@mui/material';
 interface LayoutProps {
     children: ReactNode;
   }
@@ -18,7 +19,10 @@ export default function Layout({children}:LayoutProps){
             <Image className='mt-8'  width={20} height={20}   src="/icons/Gear.png" alt="users"/>
             </div>
             <div>
-              <User />
+              <User width={40} height={40} />
+            </div>
+            <div>
+           
             </div>
             </div>
             {children}
