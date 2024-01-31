@@ -20,7 +20,8 @@ const config: Config = {
         blue: "#AFBBF7",
         horizontal: "#B4B4B4",
         textColor: "#7C7C7D",
-        btnColor: "#5B96F7"
+        btnColor: "#5B96F7",
+        blueText: "#709CE6"
       }
     },
   },

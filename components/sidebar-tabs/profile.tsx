@@ -1,13 +1,13 @@
 import Image from "next/image"
-import User from "./avatar"
+import User from "../cards/avatar"
 import { TextField } from "@mui/material"
 
 export default function Profile() {
     return (
-        <div className="profile-box bg-lightBlue100 ">
+        <div className="tab-box bg-lightBlue100 ">
             <div className="flex  gap-5">
                 <Image width={20} height={0} src="/icons/CaretDown.png" alt="backarrow" />
-                <div className=" text-lg">Profile</div>
+                <div className="font-bold text-lg">Profile</div>
             </div>
             <div className="flex flex-col items-center  mt-6">
                 <User width={80} height={80} />

@@ -8,23 +8,19 @@
     min-width: 100px;
     padding: 0rem 2rem 5rem 2rem;
 }
-
 .budgie {
     background-image: url("/sidebar/rectangle.png");
 
 }
-
 .hr {
-    border: 1px solid theme('colors.horizontal');
-    width: 50px;
+    border-top: 1px solid theme('colors.horizontal');
+    min-width: 50px;
 }
-
-.profile-box {
+.tab-box {
     min-width: 300px;
     padding: 1rem;
     min-height: 100vh;
 }
-
 .save-btn {
     width: 150px;
     height:48px;
@@ -33,4 +29,21 @@
     color: theme("colors.btnColor");
     border: 1px solid theme("colors.btnColor");
 
+}
+input[type="text"]{
+    width: 100%;
+    height: 40px;
+    border-radius: 20px; 
+    padding-left: 2rem;  
+}
+input:focus{
+    border-color: red;
+    outline: none;
+}
+input::placeholder{
+    color: theme("colors.blueText")
+}
+.search-image{
+    transform: translate(10px, 30px);
+    
 }
