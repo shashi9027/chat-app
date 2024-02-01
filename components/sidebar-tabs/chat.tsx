@@ -16,7 +16,9 @@ export default function ChatTabs(){
                <Image width={20} height={15} src="/icons/ArchiveBox.png" alt="archive-box"/> Archived
              </div>
              <div className="hr w-full mt-3"/>
-             <div className="text-greyText mt-3">Pinned</div>
+             <div className="text-greyText mt-3 font-medium">Pinned</div>
+             <UserChatCard/>
+             <div className="text-greyText mt-3 font-medium">All Chats</div>
              <UserChatCard/>
         </div>
     )

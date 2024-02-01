@@ -1,6 +1,17 @@
-.chatcard {
-   padding: 20px;
-   border-radius: 20px;
-   background-color: white;
-
+[data-component = "chat-card"]{
+   .chatcard {
+      padding:15px;
+      border-radius: 20px;
+      background-color: white;
+   }
+   .green-dot{
+      width:10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: green;
+      position: absolute;
+      bottom: 5px;
+      right:0px
+   }
 }
+
