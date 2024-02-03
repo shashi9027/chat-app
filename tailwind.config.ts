@@ -21,7 +21,8 @@ const config: Config = {
         horizontal: "#B4B4B4",
         textColor: "#7C7C7D",
         btnColor: "#5B96F7",
-        blueText: "#709CE6"
+        blueText: "#709CE6",
+        darkblue: "#5b96f7"
       }
     },
   },
