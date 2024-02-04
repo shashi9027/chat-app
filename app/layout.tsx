@@ -1,5 +1,6 @@
 import './styles/globals.scss'
 import   './styles/cards.scss'
+import   './styles/sections.scss'
 
 export default function RootLayout({
   children,

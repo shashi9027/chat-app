@@ -1,5 +1,5 @@
 import Image from "next/image"
-import SearchInput from "../search-input"
+import SearchInput from "../cards/search-input"
 import UserChatCard from "../cards/user-chat-card"
 import { Phone } from "@phosphor-icons/react/dist/ssr/Phone"
 import UserLogCard from "../cards/user-call-log-card"

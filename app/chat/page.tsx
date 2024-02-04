@@ -11,7 +11,9 @@ export default function Chat(){
                 {/* <Profile/> */}
                 {/* <ChatTabs/> */}
                 {/* <CallLog/> */}
+                <div style={{border: "1px solid grey"}}>
                 <Groups/>
+                </div>
                 <ChatScreen/>
                 
             </div>

@@ -1,5 +1,5 @@
 import Image from "next/image"
-import SearchInput from "../search-input"
+import SearchInput from "../cards/search-input"
 import UserChatCard from "../cards/user-chat-card"
 
 export default function ChatTabs(){
