@@ -1,5 +1,5 @@
 import Image from "next/image"
-import User from "../cards/avatar"
+import User from "../cards/Avatar"
 import { TextField } from "@mui/material"
 
 export default function Profile() {

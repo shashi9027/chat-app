@@ -1,5 +1,5 @@
 import { Phone } from "@phosphor-icons/react/dist/ssr/Phone";
-import User from "./avatar";
+import User from "./Avatar";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr/ArrowUpRight";
 
 

@@ -41,10 +41,11 @@ input:focus{
     outline: none;
 }
 input::placeholder{
-    color: theme("colors.blueText")
+    color: theme("colors.blueText");
+    padding-left: 10px;
 }
 .search-image{
-    transform: translate(10px, 30px);
+    transform: translate(10px, 32px);
     
 }
 .selected{

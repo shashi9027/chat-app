@@ -1,8 +1,8 @@
 import Image from "next/image"
-import SearchInput from "../cards/search-input"
-import UserChatCard from "../cards/user-chat-card"
+import SearchInput from "../cards/SearchInput"
+import UserChatCard from "../cards/UserChatCard"
 import { Phone } from "@phosphor-icons/react/dist/ssr/Phone"
-import UserLogCard from "../cards/user-call-log-card"
+import UserLogCard from "../cards/UserCallLogCard"
 
 
 

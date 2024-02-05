@@ -1,5 +1,5 @@
 "use client"
-import User from '@/components/cards/avatar';
+import User from '@/components/cards/Avatar';
 import Image from 'next/image';
 import React, { ReactNode, useState } from 'react';
 import { TextField } from '@mui/material';

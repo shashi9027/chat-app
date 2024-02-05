@@ -1,6 +1,6 @@
 import Image from "next/image"
-import SearchInput from "../cards/search-input"
-import UserChatCard from "../cards/user-chat-card"
+import SearchInput from "../cards/SearchInput"
+import UserChatCard from "../cards/UserChatCard"
 import { Plus } from "@phosphor-icons/react/dist/ssr/Plus"
 
 export default function Groups(){

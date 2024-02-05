@@ -1,4 +1,4 @@
-import User from "./avatar";
+import User from "./Avatar";
 
 
 export default function UserChatCard() {

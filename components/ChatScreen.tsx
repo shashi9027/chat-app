@@ -1,5 +1,5 @@
 "use client"
-import User from "./cards/avatar"
+import User from "./cards/Avatar"
 import { VideoCamera } from "@phosphor-icons/react/dist/ssr/VideoCamera"
 import { Phone } from "@phosphor-icons/react/dist/ssr/Phone"
 import { MagnifyingGlass } from "@phosphor-icons/react/dist/ssr/MagnifyingGlass"
@@ -9,6 +9,8 @@ import { CaretDown } from "@phosphor-icons/react/dist/ssr/CaretDown"
 import { LinkSimple } from "@phosphor-icons/react/dist/ssr/LinkSimple"
 import { Smiley } from "@phosphor-icons/react/dist/ssr/Smiley"
 import { PaperPlaneTilt } from "@phosphor-icons/react/dist/ssr/PaperPlaneTilt"
+import ConversationScreen from "./ConversationScreen"
+import { faker } from '@faker-js/faker';
 
 
 
@@ -46,6 +48,7 @@ export default function ChatScreen() {
                     <CaretDown size={25} />
                 </div>
             </div>
+            <ConversationScreen/>
             <div className="chat-section-header absolute bottom-0  flex justify-between items-center gap-5">
                 <StyledInput fullWidth placeholder="Write a message..." variant="filled" InputProps={{
                     disableUnderline: true,
