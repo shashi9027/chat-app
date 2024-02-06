@@ -1,5 +1,6 @@
 import { Box, Stack } from "@mui/material";
 import { faker } from "@faker-js/faker";
+import { LinkMsg, MediaMsg, ReplyMsg, TextMsg, Timeline } from "./MsgType";
 const ChatHistory = [
     {
         type: "msg",
@@ -52,8 +53,8 @@ const ChatHistory = [
         reply: "This is a reply",
         preview: faker.image.cats(),
         message: "Yep I can also do that",
-        incoming: true,
-        outgoing: false
+        incoming: false,
+        outgoing: true
     },
 
 ]
@@ -65,22 +66,26 @@ export default function Message(){
                {ChatHistory?.map((el)=>{
                   switch (el.type){
                     case "divider":
-
+                      return <Timeline el={el}/>
                      break;
                     case "msg":
                         switch (el.subtype){
                            case "img":
-
+                            return <MediaMsg el={el}/> 
                             break;
                            case "doc":
 
                             break;
                            case "link":
-
+                             return <LinkMsg el={el}/>
                             break;
                            case "reply":
-
+                              return <ReplyMsg el={el}/>
                             break;
+
+                            default:
+                             return  <TextMsg el={el}/>
+                             break;
                         }
 
                      break;

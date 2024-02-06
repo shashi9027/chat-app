@@ -3,7 +3,7 @@ import User from "./cards/Avatar"
 import { VideoCamera } from "@phosphor-icons/react/dist/ssr/VideoCamera"
 import { Phone } from "@phosphor-icons/react/dist/ssr/Phone"
 import { MagnifyingGlass } from "@phosphor-icons/react/dist/ssr/MagnifyingGlass"
-import { Divider, TextField , InputAdornment, Box, IconButton, Stack} from "@mui/material"
+import { Divider, TextField, InputAdornment, Box, IconButton, Stack } from "@mui/material"
 import { styled } from '@mui/system';
 import { CaretDown } from "@phosphor-icons/react/dist/ssr/CaretDown"
 import { LinkSimple } from "@phosphor-icons/react/dist/ssr/LinkSimple"
@@ -48,25 +48,27 @@ export default function ChatScreen() {
                     <CaretDown size={25} />
                 </div>
             </div>
-            <ConversationScreen/>
+            <div className="conversation-screen" style={{ maxHeight: "calc(100vh - 200px)", overflow: "auto", backgroundColor: "#F0F4FA" }}>
+                <ConversationScreen />
+            </div>
             <div className="chat-section-header absolute bottom-0  flex justify-between items-center gap-5">
                 <StyledInput fullWidth placeholder="Write a message..." variant="filled" InputProps={{
                     disableUnderline: true,
-                    startAdornment: 
-                    <InputAdornment position="center">
-                     <LinkSimple size={25}/>
-                    </InputAdornment>,
-                    endAdornment: 
-                    <InputAdornment position="center">
-                     <Smiley size={25}/>
-                    </InputAdornment>
+                    startAdornment:
+                        <InputAdornment position="center">
+                            <LinkSimple size={25} />
+                        </InputAdornment>,
+                    endAdornment:
+                        <InputAdornment position="center">
+                            <Smiley size={25} />
+                        </InputAdornment>
 
                 }} />
-                <Box sx={{height:48, width:48, background:"#5b96f7", borderRadius: 1.5}}>
-                    <Stack sx={{width: "100%", height: "100%"}} alignItems="center" justifyContent="center">
-                    <IconButton>
-                        <PaperPlaneTilt color="white" size={25}/>
-                    </IconButton>
+                <Box sx={{ height: 48, width: 48, background: "#5b96f7", borderRadius: 1.5 }}>
+                    <Stack sx={{ width: "100%", height: "100%" }} alignItems="center" justifyContent="center">
+                        <IconButton>
+                            <PaperPlaneTilt color="white" size={25} />
+                        </IconButton>
                     </Stack>
                 </Box>
             </div>
