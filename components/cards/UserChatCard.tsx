@@ -1,4 +1,5 @@
-import User from "./Avatar";
+import UserAvatar from "./Avatar";
+import Avatar from "./Avatar";
 
 
 export default function UserChatCard() {
@@ -7,7 +8,7 @@ export default function UserChatCard() {
       <div className="chatcard mt-5 flex justify-between ">
         <div className="flex gap-3">
           <div className="relative">
-          <User width={45} height={45} />
+          <UserAvatar width={45} height={45} />
           <div className="green-dot"/>
           </div>
           <div>

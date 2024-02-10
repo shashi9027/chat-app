@@ -1,6 +1,6 @@
 import { Box, Stack } from "@mui/material";
 import { faker } from "@faker-js/faker";
-import { LinkMsg, MediaMsg, ReplyMsg, TextMsg, Timeline } from "./MsgType";
+import { DocMsg, LinkMsg, MediaMsg, ReplyMsg, TextMsg, Timeline } from "./MsgType";
 const ChatHistory = [
     {
         type: "msg",
@@ -74,7 +74,7 @@ export default function Message(){
                             return <MediaMsg el={el}/> 
                             break;
                            case "doc":
-
+                             return <DocMsg el={el}/>
                             break;
                            case "link":
                              return <LinkMsg el={el}/>
@@ -82,8 +82,7 @@ export default function Message(){
                            case "reply":
                               return <ReplyMsg el={el}/>
                             break;
-
-                            default:
+                           default:
                              return  <TextMsg el={el}/>
                              break;
                         }

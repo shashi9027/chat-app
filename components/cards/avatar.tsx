@@ -5,7 +5,7 @@ type UserProps={
     height: number
 }
 
-export default function User({width, height}:UserProps){
+export default function UserAvatar({width, height}:UserProps){
     return (
         <div>
             <Avatar sx={{width: {width}, height: {height}}} alt="Cindy Baker" src="https://i.pravatar.cc/150?img=3" />

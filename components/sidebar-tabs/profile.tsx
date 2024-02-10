@@ -1,6 +1,7 @@
 import Image from "next/image"
-import User from "../cards/Avatar"
+import Avatar from "../cards/Avatar"
 import { TextField } from "@mui/material"
+import UserAvatar from "../cards/Avatar"
 
 export default function Profile() {
     return (
@@ -10,7 +11,7 @@ export default function Profile() {
                 <div className="font-bold text-lg">Profile</div>
             </div>
             <div className="flex flex-col items-center  mt-6">
-                <User width={80} height={80} />
+                <UserAvatar width={80} height={80} />
                 <TextField
                     className="mt-8 w-full"
                     id="outlined-required"

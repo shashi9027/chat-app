@@ -1,37 +1,32 @@
 "use client"
-import User from "./cards/Avatar"
+import Avatar from "./cards/Avatar"
 import { VideoCamera } from "@phosphor-icons/react/dist/ssr/VideoCamera"
 import { Phone } from "@phosphor-icons/react/dist/ssr/Phone"
 import { MagnifyingGlass } from "@phosphor-icons/react/dist/ssr/MagnifyingGlass"
-import { Divider, TextField, InputAdornment, Box, IconButton, Stack } from "@mui/material"
-import { styled } from '@mui/system';
+import { Divider, Box, IconButton, Stack } from "@mui/material"
 import { CaretDown } from "@phosphor-icons/react/dist/ssr/CaretDown"
-import { LinkSimple } from "@phosphor-icons/react/dist/ssr/LinkSimple"
-import { Smiley } from "@phosphor-icons/react/dist/ssr/Smiley"
 import { PaperPlaneTilt } from "@phosphor-icons/react/dist/ssr/PaperPlaneTilt"
 import ConversationScreen from "./ConversationScreen"
-import { faker } from '@faker-js/faker';
+import ChatInput from "./conversation/ChatInput"
+import { useTheme } from "@mui/material"
+import data from '@emoji-mart/data'
+import Picker from '@emoji-mart/react'
+import { useState } from "react"
+import UserAvatar from "./cards/Avatar"
+import Contact from "./contact"
 
 
-
-const StyledInput = styled(TextField)(({ theme }) => (
-    {
-        "& .MuiInputBase-input": {
-            paddingTop: "5px",
-            paddingBottom: "5px",
-            maxHeight: "48px"
-        }
-    }
-))
 
 export default function ChatScreen() {
+    const theme = useTheme();
+    const [openPicker, setOpenPicker] = useState(false);
     return (
         <div className="relative" data-component="chat-section" style={{ width: "100%" }}>
             <div className="chat-section-header flex justify-between items-center">
                 <div className="flex gap-4">
                     <div>
                         <div className="relative">
-                            <User width={45} height={45} />
+                            <UserAvatar width={45} height={45} />
                             <div className="green-dot" />
                         </div>
                     </div>
@@ -48,22 +43,17 @@ export default function ChatScreen() {
                     <CaretDown size={25} />
                 </div>
             </div>
-            <div className="conversation-screen" style={{ maxHeight: "calc(100vh - 200px)", overflow: "auto", backgroundColor: "#F0F4FA" }}>
+            <div className="conversation-screen" style={{ maxHeight: "calc(100vh - 160px)", overflow: "auto", backgroundColor: "#F0F4FA" }}>
                 <ConversationScreen />
+                
             </div>
             <div className="chat-section-header absolute bottom-0  flex justify-between items-center gap-5">
-                <StyledInput fullWidth placeholder="Write a message..." variant="filled" InputProps={{
-                    disableUnderline: true,
-                    startAdornment:
-                        <InputAdornment position="center">
-                            <LinkSimple size={25} />
-                        </InputAdornment>,
-                    endAdornment:
-                        <InputAdornment position="center">
-                            <Smiley size={25} />
-                        </InputAdornment>
-
-                }} />
+                <Stack sx={{width: "100%"}}>
+                    <Box sx={{display: openPicker ? "inline": "none", zIndex: 10, position: "fixed", bottom: 81, right: 100}}>
+                    <Picker theme={theme.palette.mode} data={data} onEmojiSelect={console.log} />
+                    </Box>
+                    <ChatInput setOpenPicker={setOpenPicker} />
+                </Stack>
                 <Box sx={{ height: 48, width: 48, background: "#5b96f7", borderRadius: 1.5 }}>
                     <Stack sx={{ width: "100%", height: "100%" }} alignItems="center" justifyContent="center">
                         <IconButton>

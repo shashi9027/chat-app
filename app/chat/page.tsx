@@ -3,6 +3,7 @@ import ChatScreen from "@/components/ChatScreen";
 import ChatTabs from "@/components/sidebar-tabs/chat";
 import CallLog from "@/components/sidebar-tabs/call-log";
 import Groups from "@/components/sidebar-tabs/groups";
+import Contact from "@/components/contact";
 
 export default function Chat(){
     return (
@@ -15,7 +16,7 @@ export default function Chat(){
                 <Groups/>
                 </div>
                 <ChatScreen/>
-                
+                <Contact/>
             </div>
         </div>
     )
