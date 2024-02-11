@@ -14,21 +14,26 @@ import Picker from '@emoji-mart/react'
 import { useState } from "react"
 import UserAvatar from "./cards/Avatar"
 import Contact from "./contact"
+import { ToggleSidebar } from "@/redux/slices/app"
+import { useDispatch } from "react-redux"
 
 
 
 export default function ChatScreen() {
     const theme = useTheme();
     const [openPicker, setOpenPicker] = useState(false);
+    const dispatch = useDispatch()
     return (
         <div className="relative" data-component="chat-section" style={{ width: "100%" }}>
             <div className="chat-section-header flex justify-between items-center">
                 <div className="flex gap-4">
                     <div>
-                        <div className="relative">
+                        <button onClick={()=>{
+                            dispatch(ToggleSidebar())
+                        }} className="relative">
                             <UserAvatar width={45} height={45} />
                             <div className="green-dot" />
-                        </div>
+                        </button>
                     </div>
                     <div>
                         <div className="font-bold ">Pink Panda</div>
