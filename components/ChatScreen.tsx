@@ -13,7 +13,7 @@ import data from '@emoji-mart/data'
 import Picker from '@emoji-mart/react'
 import { useState } from "react"
 import UserAvatar from "./cards/Avatar"
-import Contact from "./contact"
+import Contact from "./Contact"
 import { ToggleSidebar } from "@/redux/slices/app"
 import { useDispatch } from "react-redux"
 

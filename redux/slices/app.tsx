@@ -1,7 +1,6 @@
 "use client"
 import { createSlice } from "@reduxjs/toolkit";
 import { dispatch } from "../store"
-import { Sidebar } from "phosphor-react";
 
 const initialState = {
     sidebar: {
@@ -25,7 +24,7 @@ const slice = createSlice({
 
 export default slice.reducer
 
-export function ToggleSidebar(){
+export function ToggleSidebar() : () => Promise<void>{
          return async () =>{
              dispatch(slice.actions.toggleSidebar())
          }
