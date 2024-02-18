@@ -59,7 +59,7 @@ const ChatHistory = [
 
 ]
 
-export default function Message(){
+export default function Message({menu}:any){
     return(
         <Box p={3}>
              <Stack spacing={3}>
@@ -71,19 +71,19 @@ export default function Message(){
                     case "msg":
                         switch (el.subtype){
                            case "img":
-                            return <MediaMsg el={el}/> 
+                            return <MediaMsg el={el} menu={menu}/> 
                             break;
                            case "doc":
-                             return <DocMsg el={el}/>
+                             return <DocMsg el={el} menu={menu}/>
                             break;
                            case "link":
-                             return <LinkMsg el={el}/>
+                             return <LinkMsg el={el} menu={menu}/>
                             break;
                            case "reply":
-                              return <ReplyMsg el={el}/>
+                              return <ReplyMsg el={el} menu={menu}/>
                             break;
                            default:
-                             return  <TextMsg el={el}/>
+                             return  <TextMsg el={el} menu={menu}/>
                              break;
                         }
 

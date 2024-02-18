@@ -54,7 +54,7 @@ const DocMsg = ({ el }: any) => {
 }
 
 
-const LinkMsg = ({ el }: any) => {
+const LinkMsg = ({ el , menu}: any) => {
     const theme = useTheme()
     return (
         <Stack direction="row" justifyContent={el.incoming ? "start" : "end"}>
@@ -71,13 +71,14 @@ const LinkMsg = ({ el }: any) => {
                     </Stack>
                 </Stack>
             </Box>
-            <MessageOptions />
+            {menu &&  <MessageOptions /> }
+           
         </Stack>
 
     )
 }
 
-const MediaMsg = ({ el }: any) => {
+const MediaMsg = ({ el, menu }: any) => {
     const theme = useTheme()
     return (
         <Stack direction="row" justifyContent={el.incoming ? "start" : "end"}>
@@ -89,12 +90,13 @@ const MediaMsg = ({ el }: any) => {
                     </Typography>
                 </Stack>
             </Box>
-            <MessageOptions />
+            {menu && <MessageOptions /> }
+            
         </Stack>
     )
 }
 
-const TextMsg = ({ el }: any) => {
+const TextMsg = ({ el, menu }: any) => {
     const theme = useTheme()
     return (
         <Stack direction="row" justifyContent={el.incoming ? "start" : "end"}>
@@ -103,12 +105,13 @@ const TextMsg = ({ el }: any) => {
                     {el.message}
                 </Typography>
             </Box>
-            <MessageOptions />
+            {menu && <MessageOptions /> }
+            
         </Stack>
     )
 }
 
-const ReplyMsg = ({ el }: any) => {
+const ReplyMsg = ({ el , menu}: any) => {
     const theme = useTheme()
     return (
         <Stack direction="row" justifyContent={el.incoming ? "start" : "end"}>
@@ -120,7 +123,8 @@ const ReplyMsg = ({ el }: any) => {
                     <Typography variant="body2" color={el?.incoming ? theme.palette.text : "white"}>{el.reply}</Typography>
                 </Stack>
             </Box>
-            <MessageOptions />
+            {menu &&  <MessageOptions /> }
+           
         </Stack>
     )
 }

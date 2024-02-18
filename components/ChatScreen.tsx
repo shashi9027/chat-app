@@ -49,7 +49,7 @@ export default function ChatScreen() {
                 </div>
             </div>
             <div className="conversation-screen" style={{ maxHeight: "calc(100vh - 160px)", overflow: "auto", backgroundColor: "#F0F4FA" }}>
-                <ConversationScreen />
+                <ConversationScreen menu={true} />
                 
             </div>
             <div className="chat-section-header absolute bottom-0  flex justify-between items-center gap-5">

@@ -7,20 +7,32 @@ import Groups from "@/components/sidebar-tabs/groups";
 import Contact from "@/components/Contact";
 import { useSelector } from "react-redux";
 import { Sidebar } from "phosphor-react";
+import SharedMessages from "@/components/SharedMessages";
+import StarredMessages from "@/components/StarredMessages";
 
 export default function Chat(){
-    const {sidebar} = useSelector((store) =>  store.app)
+    const {sidebar} = useSelector((store:any) =>  store.app)
+    const renderSidebarComponent = () => {
+        switch (sidebar.type) {
+            case "CONTACT":
+                return <Contact />;
+            case "STARRED":
+                return <StarredMessages/>; // Handle other cases as needed
+            case "SHARED":
+                return <SharedMessages />;
+            default:
+                return null; // Handle default case or unknown types
+        }
+    };
     return (
         <div className="grow">
+        
             <div className="flex">
-                {/* <Profile/> */}
-                {/* <ChatTabs/> */}
-                {/* <CallLog/> */}
                 <div style={{border: "1px solid #F8F8F8"}}>
                 <Groups/>
                 </div>
                 <ChatScreen/>
-                {sidebar.open &&  <Contact/> }
+                {sidebar.open && renderSidebarComponent()}
                
             </div>
         </div>
