@@ -1,14 +1,15 @@
 "use client"
-import Profile from "@/components/sidebar-tabs/profile";
+import Profile from "@/components/sidebar-tabs/Profile";
 import ChatScreen from "@/components/ChatScreen";
-import ChatTabs from "@/components/sidebar-tabs/chat";
-import CallLog from "@/components/sidebar-tabs/call-log";
-import Groups from "@/components/sidebar-tabs/groups";
+import ChatTabs from "@/components/sidebar-tabs/Chat";
+import CallLog from "@/components/sidebar-tabs/CallLog";
+import Groups from "@/components/sidebar-tabs/Groups";
 import Contact from "@/components/Contact";
 import { useSelector } from "react-redux";
 import { Sidebar } from "phosphor-react";
 import SharedMessages from "@/components/SharedMessages";
 import StarredMessages from "@/components/StarredMessages";
+import Settings from "@/components/sidebar-tabs/Settings";
 
 export default function Chat(){
     const {sidebar} = useSelector((store:any) =>  store.app)
@@ -29,9 +30,10 @@ export default function Chat(){
         
             <div className="flex">
                 <div style={{border: "1px solid #F8F8F8"}}>
-                <Groups/>
+                <Settings/>
                 </div>
                 <ChatScreen/>
+                
                 {sidebar.open && renderSidebarComponent()}
                
             </div>
