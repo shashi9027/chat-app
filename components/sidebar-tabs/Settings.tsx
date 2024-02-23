@@ -2,6 +2,8 @@ import { faker } from "@faker-js/faker";
 import { Avatar, Divider, IconButton, Stack, Typography } from "@mui/material";
 import { Bell, CaretLeft , Key, Lock, PencilCircle, Image, Note, Keyboard, Info} from "phosphor-react";
 import UserAvatar from "../cards/Avatar";
+import Shortcuts from "../Shortcuts";
+import { useState } from "react";
 
 type listProps = {
     key: number;
@@ -65,6 +67,13 @@ const list = [
 
 
 export default function Settings(){
+    const [openShortcuts, setOpenShortcuts] = useState(false);
+    const handleOpenShortCuts = () =>{
+        setOpenShortcuts(true)
+    }
+    const handleCloseShortCuts = () =>{
+        setOpenShortcuts(false)
+    }
 return(
     <div className="tab-box bg-lightBlue100 " style={{maxHeight: "100vh", overflow: "auto"}}>
           <Stack direction="row" alignItems={"center"} spacing={3}>
@@ -97,6 +106,8 @@ return(
               <Divider/>
               </>)}
           </Stack>
+          {openShortcuts &&  <Shortcuts open={openShortcuts} handleClose={handleCloseShortCuts}/>}
+         
     </div>
 )  
 }
