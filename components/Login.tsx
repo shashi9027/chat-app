@@ -2,6 +2,7 @@ import {  Stack, Typography } from "@mui/material"
 import Link from "next/link"
 import MainLayout from "./MainLayout"
 import SocialLogin from "./cards/SocialLogin"
+import LoginForm from "./cards/LoginForm"
 
 const Login = () =>{
     return(
@@ -13,6 +14,7 @@ const Login = () =>{
                 <Typography variant="body2">New User ?</Typography>
                 <Link href="/Signup" ><div style={{color: "blue", textDecoration:"underline"}}>Create an account</div></Link>
             </Stack>
+            <LoginForm/>
             <SocialLogin/>
 
         </Stack>
