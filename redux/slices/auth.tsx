@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import axios from "../../utils/axios";
-import { showSnackbar } from "./app";
+// import axios from "../../utils/axios";
+// import { showSnackbar } from "./app";
 
 // ----------------------------------------------------------------------
 

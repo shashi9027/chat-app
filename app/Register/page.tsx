@@ -2,6 +2,7 @@ import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Stack, Typography, Link } from '@mui/material';
 import SocialLogin from '@/components/cards/SocialLogin';
+import AuthRegisterForm from '@/components/cards/RegisterForm';
 
 export default function Register() {
   return (
@@ -18,7 +19,7 @@ export default function Register() {
         </Stack>
       </Stack>
       {/* Form */}
-      <RegisterForm  />
+      <AuthRegisterForm  />
 
       <Typography
         component="div"

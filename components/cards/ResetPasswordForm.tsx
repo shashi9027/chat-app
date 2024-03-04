@@ -49,12 +49,10 @@ export default function AuthResetPasswordForm() {
         sx={{
           mt: 3,
           bgcolor: "text.primary",
-          color: (theme) =>
-            theme.palette.mode === "light" ? "common.white" : "grey.800",
+          color: "common.white",
           "&:hover": {
             bgcolor: "text.primary",
-            color: (theme) =>
-              theme.palette.mode === "light" ? "common.white" : "grey.800",
+            color:  "common.white",
           },
         }}
       >
