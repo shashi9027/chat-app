@@ -8,6 +8,10 @@ import { IconButton } from "@mui/material"
 
 export default function Groups(){
    const [openDialog, setOpenDialog] = useState(false)
+
+   const handleClose = () =>{
+      setOpenDialog(false)
+   }
     return (
         <div className="tab-box bg-lightBlue100 ">
              <div className="flex justify-between">
@@ -29,7 +33,7 @@ export default function Groups(){
              <UserChatCard/>
              <div className="text-greyText mt-3 font-medium">All Chats</div>
              <UserChatCard/>
-             {openDialog && <CreateGroup open={openDialog} handleClose={()=> setOpenDialog(false)}/>}
+             {openDialog && <CreateGroup open={openDialog} handleClose={handleClose}/>}
         </div>
     )
 }

@@ -17,3 +17,5 @@ const FormProvider = ({children, onSubmit, methods}: FormProviderProps) =>{
         </Form>
     )
 }
+
+export default FormProvider
