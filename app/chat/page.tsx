@@ -30,7 +30,7 @@ export default function Chat(){
         
             <div className="flex">
                 <div style={{border: "1px solid #F8F8F8"}}>
-                <Groups/>
+                  <CallLog/>
                 </div>
                 <ChatScreen/>
                 
